@@ -10,20 +10,18 @@ body {
 	align-content: center;
 	justify-content: center;
 	flex-wrap: wrap;
-	color: #000501;
-	font-family: 'Orelega One', cursive;
+	font-family: 'Roboto', sans-serif;
 }
 h3 {
 	font-size: 2em;
-	color: #60935D;
-	margin: 20px;
+	margin: 30px;
 }
 h5 {
 	font-size: 1.75em;
 }
 p {
-	margin: 20px;
 	font-size: 1.5em;
+	margin-top: 10px;
 }
 #form-container {
 	display: flex;
@@ -42,7 +40,7 @@ label {
 input {
 	width: 50px;
 	height: 30px;
-	border: 2px #60935D solid;
+	border: 2px black solid;
 	text-align: center;
 	align-self: center;
 	border-radius: 3px;
@@ -72,8 +70,20 @@ form {
 .column {
 	display: flex;
 	flex-direction: column;
-	background-color: #96C9DC;
 	justify-content: center;
 	width: 100vw;
 	flex-wrap: wrap;
+	margin: 20px 0;
+}
+.gazde-text {
+	color: #19647E;
+}
+.gazde-bg {
+	background-color: #96C9DC;
+}
+.oaspeti-text {
+	color: #60935D;
+}
+.oaspeti-bg {
+	background-color: #C5E99B;
 }

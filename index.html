@@ -4,13 +4,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>Application</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 	<div id="form-container">
 		<form>
 			<h3>Metoda I - forma de joc (acasa/deplasare)</h3>
-			<h5>Gazde</h5>
+			<h5 class="gazde-text">Gazde</h5>
+			<div class="column gazde-bg">
 			<label for="mja">Meciuri jucate acasa (gazde):</label>
 			<input type="text" id="mja" name="mja" value="5"><br>
 			<label for="victoriiG">Victorii:</label>
@@ -19,9 +22,10 @@
 			<input type="text" id="egaluriG" name="egaluriG"><br>
 			<label for="infrangeriG">Infrangeri:</label>
 			<input type="text" id="infrangeriG" name="infrangeriG"><br>
-			<hr>
+			</div>
 			<br>
-			<h5>Oaspeti</h5>
+			<h5 class="oaspeti-text">Oaspeti</h5>
+			<div class="column oaspeti-bg" >
 			<label for="mjd">Meciuri jucate in deplasare (oaspeti):</label>
 			<input type="text" id="mjd" name="mjd" value="5"><br>
 			<label for="victoriiO">Victorii:</label>
@@ -29,11 +33,13 @@
 			<label for="egaluriO">Egaluri:</label>
 			<input type="text" id="egaluriO" name="egaluriO"><br>
 			<label for="infrangeriO">Infrangeri:</label>
-			<input type="text" id="infrangeriO" name="infrangeriO"><br>
+			<input type="text" id="infrangeriO" name="infrangeriO">
+			<br>
+			</div>
 			<h3>Metoda II - forma recenta (ultimele 3 meciuri)<br>+<br>Metoda III - forma recenta (mai importante cele recente, ultimele 3 meciuri)</h3>
-			<h5>Gazde</h5>
-			<p>Meci 1</p>
-			<div class="column">
+			<h5 class="gazde-text">Gazde</h5>
+			<div class="column gazde-bg">
+				<p>Meci 1</p>
 				<label for="victorieAcasaG1">Victorie Acasa:</label>
 				<input type="text" id="victorieAcasaG1" name="victorieAcasaG1"><br>
 				<label for="egalAcasaG1">Egal Acasa:</label>
@@ -43,8 +49,8 @@
 				<label for="egalDeplasareG1">Egal deplasare:</label>
 				<input type="text" id="egalDeplasareG1" name="egalDeplasareG1"><br>
 			</div>
-			<p>Meci 2</p>
-			<div class="column">
+			<div class="column gazde-bg">
+				<p>Meci 2</p>
 				<label for="victorieAcasaG2">Victorie Acasa:</label>
 				<input type="text" id="victorieAcasaG2" name="victorieAcasaG2"><br>
 				<label for="egalAcasaG2">Egal Acasa:</label>
@@ -54,8 +60,8 @@
 				<label for="egalDeplasareG2">Egal deplasare:</label>
 				<input type="text" id="egalDeplasareG2" name="egalDeplasareG2"><br>
 			</div>
-			<p>Meci 3</p>
-			<div class="column">
+			<div class="column gazde-bg">
+				<p>Meci 3</p>
 				<label for="victorieAcasaG3">Victorie Acasa:</label>
 				<input type="text" id="victorieAcasaG3" name="victorieAcasaG3"><br>
 				<label for="egalAcasaG3">Egal Acasa:</label>
@@ -65,9 +71,9 @@
 				<label for="egalDeplasareG3">Egal deplasare:</label>
 				<input type="text" id="egalDeplasareG3" name="egalDeplasareG3"><br>
 			</div>
-			<h5>Oaspeti</h5>
-			<p>Meci 1</p>
-			<div class="column">
+			<h5 class="oaspeti-text">Oaspeti</h5>
+			<div class="column oaspeti-bg">
+				<p>Meci 1</p>
 				<label for="victorieAcasaO1">Victorie Acasa:</label>
 				<input type="text" id="victorieAcasaO1" name="victorieAcasaO1"><br>
 				<label for="egalAcasaO1">Egal Acasa:</label>
@@ -77,8 +83,8 @@
 				<label for="egalDeplasareO1">Egal deplasare:</label>
 				<input type="text" id="egalDeplasareO1" name="egalDeplasareO1"><br>
 			</div>
-			<p>Meci 2</p>
-			<div class="column">
+			<div class="column oaspeti-bg">
+				<p>Meci 2</p>
 				<label for="victorieAcasaO2">Victorie Acasa:</label>
 				<input type="text" id="victorieAcasaO2" name="victorieAcasaO2"><br>
 				<label for="egalAcasaO2">Egal Acasa:</label>
@@ -88,8 +94,8 @@
 				<label for="egalDeplasareO2">Egal deplasare:</label>
 				<input type="text" id="egalDeplasareO2" name="egalDeplasareO2"><br>
 			</div>
-			<p>Meci 3</p>
-			<div class="column">
+			<div class="column oaspeti-bg">
+				<p>Meci 3</p>
 				<label for="victorieAcasaO3">Victorie Acasa:</label>
 				<input type="text" id="victorieAcasaO3" name="victorieAcasaO3"><br>
 				<label for="egalAcasaO3">Egal Acasa:</label>
@@ -100,73 +106,65 @@
 				<input type="text" id="egalDeplasareO3" name="egalDeplasareO3"><br>
 			</div>
 			<h3>Metoda IV - forma recenta (goluri marcate - ultimele 3 meciuri)<br>+<br>Metoda V - medie goluri</h3>
-			<h5>Gazde</h5>
-			<p>Meci 1</p>
-			<div class="column">
-				<label for="victorieAcasaG1">Victorie Acasa:</label>
-				<input type="text" id="victorieAcasaG1" name="victorieAcasaG1"><br>
-				<label for="egalAcasaG1">Egal Acasa:</label>
-				<input type="text" id="egalAcasaG1" name="egalAcasaG1"><br>
-				<label for="victorieDeplasareG1">Victorie deplasare:</label>
-				<input type="text" id="victorieDeplasareG1" name="victorieDeplasareG1"><br>
-				<label for="egalDeplasareG1">Egal deplasare:</label>
-				<input type="text" id="egalDeplasareG1" name="egalDeplasareG1"><br>
+			<h5 class="gazde-text">Gazde</h5>
+			<div class="column gazde-bg">
+				<p>Goluri marcate (acasa)</p>
+				<label for="meci1GMarc">Meci 1:</label>
+				<input type="text" id="meci1GMarc" name="meci1GMarc"><br>
+				<label for="meci2GMarc">Meci 2:</label>
+				<input type="text" id="meci2GMarc" name="meci2GMarc"><br>
+				<label for="meci3GMarc">Meci 3:</label>
+				<input type="text" id="meci3GMarc" name="meci3GMarc"><br>
 			</div>
-			<p>Meci 2</p>
-			<div class="column">
-				<label for="victorieAcasaG2">Victorie Acasa:</label>
-				<input type="text" id="victorieAcasaG2" name="victorieAcasaG2"><br>
-				<label for="egalAcasaG2">Egal Acasa:</label>
-				<input type="text" id="egalAcasaG2" name="egalAcasaG2"><br>
-				<label for="victorieDeplasareG2">Victorie deplasare:</label>
-				<input type="text" id="victorieDeplasareG2" name="victorieDeplasareG2"><br>
-				<label for="egalDeplasareG2">Egal deplasare:</label>
-				<input type="text" id="egalDeplasareG2" name="egalDeplasareG2"><br>
+			<div class="column gazde-bg">
+				<p>Goluri primite (acasa)</p>
+				<label for="meci1GPrim">Meci 1:</label>
+				<input type="text" id="meci1GPrim" name="meci1GPrim"><br>
+				<label for="meci2GPrim">Meci 2:</label>
+				<input type="text" id="meci2GPrim" name="meci2GPrim"><br>
+				<label for="meci3GPrim">Meci 3:</label>
+				<input type="text" id="meci3GPrim" name="meci3GPrim"><br>
 			</div>
-			<p>Meci 3</p>
-			<div class="column">
-				<label for="victorieAcasaG3">Victorie Acasa:</label>
-				<input type="text" id="victorieAcasaG3" name="victorieAcasaG3"><br>
-				<label for="egalAcasaG3">Egal Acasa:</label>
-				<input type="text" id="egalAcasaG3" name="egalAcasaG3"><br>
-				<label for="victorieDeplasareG3">Victorie deplasare:</label>
-				<input type="text" id="victorieDeplasareG3" name="victorieDeplasareG3"><br>
-				<label for="egalDeplasareG3">Egal deplasare:</label>
-				<input type="text" id="egalDeplasareG3" name="egalDeplasareG3"><br>
+			<h5 class="oaspeti-text">Oaspeti</h5>
+			<div class="column oaspeti-bg">
+				<p>Goluri marcate (deplasare)</p>
+				<label for="meci1OMarc">Meci 1:</label>
+				<input type="text" id="meci1OMarc" name="meci1OMarc"><br>
+				<label for="meci2OMarc">Meci 2:</label>
+				<input type="text" id="meci2OMarc" name="meci2OMarc"><br>
+				<label for="meci3OMarc">Meci 3:</label>
+				<input type="text" id="meci3OMarc" name="meci3OMarc"><br>
 			</div>
-			<h5>Oaspeti</h5>
-			<p>Meci 1</p>
-			<div class="column">
-				<label for="victorieAcasaO1">Victorie Acasa:</label>
-				<input type="text" id="victorieAcasaO1" name="victorieAcasaO1"><br>
-				<label for="egalAcasaO1">Egal Acasa:</label>
-				<input type="text" id="egalAcasaO1" name="egalAcasaO1"><br>
-				<label for="victorieDeplasareO1">Victorie deplasare:</label>
-				<input type="text" id="victorieDeplasareO1" name="victorieDeplasareO1"><br>
-				<label for="egalDeplasareO1">Egal deplasare:</label>
-				<input type="text" id="egalDeplasareO1" name="egalDeplasareO1"><br>
+			<div class="column oaspeti-bg">
+				<p>Goluri primite (deplasare)</p>
+				<label for="meci1OPrim">Meci 1:</label>
+				<input type="text" id="meci1OPrim" name="meci1OPrim"><br>
+				<label for="meci2OPrim">Meci 2:</label>
+				<input type="text" id="meci2OPrim" name="meci2OPrim"><br>
+				<label for="meci3OPrim">Meci 3:</label>
+				<input type="text" id="meci3OPrim" name="meci3OPrim"><br>
 			</div>
-			<p>Meci 2</p>
-			<div class="column">
-				<label for="victorieAcasaO2">Victorie Acasa:</label>
-				<input type="text" id="victorieAcasaO2" name="victorieAcasaO2"><br>
-				<label for="egalAcasaO2">Egal Acasa:</label>
-				<input type="text" id="egalAcasaO2" name="egalAcasaO2"><br>
-				<label for="victorieDeplasareO2">Victorie deplasare:</label>
-				<input type="text" id="victorieDeplasareO2" name="victorieDeplasareO2"><br>
-				<label for="egalDeplasareO2">Egal deplasare:</label>
-				<input type="text" id="egalDeplasareO2" name="egalDeplasareO2"><br>
+			<h3>Metoda VI - ultimele 5 meciuri directe</h3>
+			<div class="column gazde-bg">
+				<label for="victoriiGMD">Victorii gazde:</label>
+				<input type="text" id="victoriiGMD" name="victoriiGMD"><br>
 			</div>
-			<p>Meci 3</p>
-			<div class="column">
-				<label for="victorieAcasaO3">Victorie Acasa:</label>
-				<input type="text" id="victorieAcasaO3" name="victorieAcasaO3"><br>
-				<label for="egalAcasaO3">Egal Acasa:</label>
-				<input type="text" id="egalAcasaO3" name="egalAcasaO3"><br>
-				<label for="victorieDeplasareO3">Victorie deplasare:</label>
-				<input type="text" id="victorieDeplasareO3" name="victorieDeplasareO3"><br>
-				<label for="egalDeplasareO3">Egal deplasare:</label>
-				<input type="text" id="egalDeplasareO3" name="egalDeplasareO3"><br>
+			<div class="column oaspeti-bg">
+				<label for="victoriiOMD">Victorii oaspeti:</label>
+				<input type="text" id="victoriiOMD" name="victoriiOMD"><br>
+			</div>
+			<h3>Metoda VII - pozitia in clasament</h3>
+			<div class="column gazde-bg">
+				<label for="pozG">Pozitie gazde:</label>
+				<input type="text" id="pozG" name="pozG"><br>
+			</div>
+			<div class="column oaspeti-bg">
+				<label for="pozO">Pozitie oaspeti:</label>
+				<input type="text" id="pozO" name="pozO"><br>
+			</div>
+			<div class="column" style="background-color: grey">
+				<label for="totalEchipe">Total echipe clasament:</label>
+				<input type="text" id="totalEchipe" name="totalEchipe"><br>
 			</div>
 			<input type="submit" name="submit" value="Submit" id="submit">
 		</form>
