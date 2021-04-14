@@ -10,10 +10,12 @@ body {
 	align-content: center;
 	justify-content: center;
 	flex-wrap: wrap;
+	color: #000501;
+	font-family: 'Orelega One', cursive;
 }
 h3 {
 	font-size: 2em;
-	color: green;
+	color: #60935D;
 	margin: 20px;
 }
 h5 {
@@ -21,6 +23,7 @@ h5 {
 }
 p {
 	margin: 20px;
+	font-size: 1.5em;
 }
 #form-container {
 	display: flex;
@@ -37,9 +40,13 @@ label {
 	font-size: 1.5em;
 }
 input {
-	width: 30px;
+	width: 50px;
+	height: 30px;
+	border: 2px #60935D solid;
 	text-align: center;
 	align-self: center;
+	border-radius: 3px;
+	font-size: 1.5em;
 }
 #submit {
 	width: 150px !important;
@@ -62,15 +69,11 @@ form {
 	justify-content: center;
 	text-align: center;
 }
-.row {
+.column {
 	display: flex;
-	flex-direction: row;
-	background-color: pink;
+	flex-direction: column;
+	background-color: #96C9DC;
 	justify-content: center;
 	width: 100vw;
 	flex-wrap: wrap;
-}
-.row label {
-	font-size: 1.2em;
-	margin: 10px;
 }
