@@ -58,17 +58,38 @@ function calculateChances() {
 	let met3 = (puncteTotGMet3 - puncteTotOMet3) * 100;
 	let met3Proc = Math.round((met3 / 30) * 1e2 ) / 1e2;
 
+	// Metoda IV
+	let marcG = parseInt(document.getElementById("marcG").value);
+	let primG = parseInt(document.getElementById("primG").value);
+	let marcO = parseInt(document.getElementById("marcO").value);
+	let primO = parseInt(document.getElementById("primO").value);
+	let met4 = ((marcG + primO) - (marcO + primG)) * 100;
+	let met4Proc = Math.round((met4 / 20) * 1e2 ) / 1e2;
+
+	// Metoda V
+	let medieGoluriG = marcG / 3;
+	let medieGoluriO = marcO / 3;
+	let met5 = (medieGoluriG - medieGoluriO) * 100;
+	let met5Proc = Math.round((met5 / 3) * 1e2 ) / 1e2;
+
+	// Metoda VI
+	let victoriiGMD = parseInt(document.getElementById("victoriiGMD").value);
+	let victoriiOMD = parseInt(document.getElementById("victoriiOMD").value);
+	let met6 = (victoriiGMD - victoriiOMD) * 100;
+	let met6Proc = Math.round((met6 / 5) * 1e2 ) / 1e2;
+
+	// Metoda VII
+	let pozG = parseInt(document.getElementById("pozG").value);
+	let pozO = parseInt(document.getElementById("pozO").value);
+	let totalEchipe = parseInt(document.getElementById("totalEchipe").value);
+	let met7 = (pozO - pozG) * 100;
+	let met7Proc = Math.round((met7 / totalEchipe) * 1e2 ) / 1e2;
+
 	// Calcul final
-	let mediaSanselor = (met1Proc + met2Proc + met3Proc) / 3;
+	let mediaSanselor = ((met1Proc + met2Proc + met3Proc + met4Proc + met5Proc + met6Proc + met7Proc) / 7) / 2;
 	let mediaSanselorProc = Math.round(mediaSanselor * 1e2 ) / 1e2;
-	let sanseG = 50 + mediaSanselorProc;
-	let sanseO = 50 - mediaSanselorProc;
+	let sanseG = Math.round((50 + mediaSanselorProc) * 1e2 ) / 1e2;
+	let sanseO = Math.round((50 - mediaSanselorProc) * 1e2 ) / 1e2;
 
-
-	alert(met1Proc);
-	alert(met2Proc);
-	alert(met3Proc);
-	alert(mediaSanselor);
-	alert(mediaSanselorProc);
 	alert("Gazdele au sanse de castig de " + sanseG + "%, iar oaspetii au sanse de castig de " + sanseO + "%.");
 }
