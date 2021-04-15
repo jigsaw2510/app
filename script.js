@@ -1,4 +1,3 @@
-
 document.getElementById("submit").addEventListener("click", calculateChances);
 function calculateChances() {
 
@@ -88,8 +87,7 @@ function calculateChances() {
 	// Calcul final
 	let mediaSanselor = ((met1Proc + met2Proc + met3Proc + met4Proc + met5Proc + met6Proc + met7Proc) / 7) / 2;
 	let mediaSanselorProc = Math.round(mediaSanselor * 1e2 ) / 1e2;
-	let sanseG = Math.round((50 + mediaSanselorProc) * 1e2 ) / 1e2;
-	let sanseO = Math.round((50 - mediaSanselorProc) * 1e2 ) / 1e2;
-
-	alert("Gazdele au sanse de castig de " + sanseG + "%, iar oaspetii au sanse de castig de " + sanseO + "%.");
+	window.sanseG = Math.round((50 + mediaSanselorProc) * 1e2 ) / 1e2;
+	window.sanseO = Math.round((50 - mediaSanselorProc) * 1e2 ) / 1e2;
+	alert ("Gazdele au sanse de castig de " + sanseG + "%, iar oaspetii au sanse de castig de " + sanseO + "%.");
 }
